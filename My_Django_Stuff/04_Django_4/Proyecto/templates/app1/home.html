@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "app1/base.html" %}
+{% load mis_filtros %}
+
+{% block body_block %}
+  <h1>Esto es home.html</h1>
+  <h3>{{ key1_frase }}</h3>
+  <h3>{{ key1_frase|upper }} (con filtro built-in -- |upper)</h3>
+  <h3>{{ key1_frase|corta_filtro:"primera" }} (con filtro manual -- |corta_filtro:"primera")</h3>
+  <h3>{{ key1_frase|pone_uno_filtro:"primera" }} (con filtro manual -- |pone_uno_filtro:"primera")</h3>
+  <h3>{{ key2_numero }}</h3>
+  <h3>{{ key2_numero|add:"6000" }} (con filtro -- |add:"6000")</h3>
+{% endblock %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>users gonorreas</title>
+  </head>
+  <body>
+    <h1>Texto tipo /h1 de html</h1>
+    <h2>Texto tipo /h2 de html</h2>
+    <div class="helloperro">
+      {% if conexion_html %}
+      <table>
+        <thead>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Correo electronico</th>
+        </thead>
+
+        {% for x in conexion_html %}
+        <tr>
+          <td> {{x.first_name}} </td>
+          <td>{{ x.last_name }}</td>
+          <td>{{ x.email }}</td>
+        </tr>
+        {% endfor %}
+
+      </table>
+
+      <!-- AQUI SE PUEDE PONER UN ELSE COMO POR EJEMPLO
+
+      {% else %}
+      <p>NO HAY ACCESS RECORDS ÑERO ALGO PASÓ</p>
+      {% endif %}
+
+      -->
+
+    </div>
+  </body>
+
+</html>
